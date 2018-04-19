@@ -18,3 +18,12 @@ self.addEventListener('install', (event) => {
         })
     );
 });
+
+// intercept fetch events and return cache data if available
+self.addEventListener('fetch', (event) => {
+    event.respondWith(
+        caches.match(event.request).then( response => {
+            return response || fetch(event.request);
+        })
+    )
+});
