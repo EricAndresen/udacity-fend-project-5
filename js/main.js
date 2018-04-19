@@ -1,5 +1,7 @@
 // TODO: make map height responsive (vh)
-// Check if mobile really is different
+// TODO: make restaurant display page responsive
+// TODO: make cards clickable (not just tiny details view text)
+// TODO: Accessibility
 
 let restaurants,
   neighborhoods,
