@@ -158,9 +158,17 @@ nav h1 a {
   font-family: Arial,sans-serif;
   margin: 15px;
   min-height: 380px;
-  padding: 0 30px 25px;
   text-align: left;
 }
+
+.restaurant-card .card-content{
+  padding: 15px 25px;
+}
+
+.restaurant-card h1{
+  padding: 0;
+}
+
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   margin: 0;
