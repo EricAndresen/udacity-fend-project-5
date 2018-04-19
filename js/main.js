@@ -1,3 +1,6 @@
+// TODO: make map height responsive (vh)
+// Check if mobile really is different
+
 let restaurants,
   neighborhoods,
   cuisines
@@ -137,6 +140,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const div = document.createElement('div');
+  div.className = 'restaurant-card'
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
