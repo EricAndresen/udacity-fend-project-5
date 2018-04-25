@@ -1,5 +1,7 @@
-// Resources not loading - I suspect its because there is a single point of failure in the cache match - maybe google api? 
 // Need to add polyfill for safari
+
+// TODO: only cache images if user clicks on restaurant see https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker
+// TODO: if cacheName is changed delete old cache
 
 // cache name (change this when modified)
 const cacheName = 'restaurant-app-v1'
@@ -17,6 +19,16 @@ self.addEventListener('install', (event) => {
                 'js/restaurant_info.js',
                 'js/dbhelper.js',
                 '/data/restaurants.json',
+                '/img/1.jpg',
+                '/img/2.jpg',
+                '/img/3.jpg',
+                '/img/4.jpg',
+                '/img/5.jpg',
+                '/img/6.jpg',
+                '/img/7.jpg',
+                '/img/8.jpg',
+                '/img/9.jpg',
+                '/img/10.jpg',
             ])
         })
     );
