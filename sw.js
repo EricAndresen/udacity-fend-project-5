@@ -1,3 +1,4 @@
+// Resources not loading - I suspect its because there is a single point of failure in the cache match - maybe google api? 
 // Need to add polyfill for safari
 
 // cache name (change this when modified)
@@ -10,10 +11,12 @@ self.addEventListener('install', (event) => {
             return cache.addAll([
                 '/',
                 '/index.html',
+                '/restaurant.html',
                 '/css/styles.css',
                 'js/main.js',
                 'js/restaurant_info.js',
                 'js/dbhelper.js',
+                '/data/restaurants.json',
             ])
         })
     );
@@ -25,5 +28,6 @@ self.addEventListener('fetch', (event) => {
         caches.match(event.request).then( response => {
             return response || fetch(event.request);
         })
-    )
+        .catch( e => console.log(e))
+    );;
 });

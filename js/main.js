@@ -86,6 +86,7 @@ window.initMap = () => {
     scrollwheel: false
   });
   updateRestaurants();
+  // debugger
 }
 
 /**
