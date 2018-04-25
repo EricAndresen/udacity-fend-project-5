@@ -169,6 +169,5 @@ if (!window.navigator.onLine){
 
   fetchRestaurantFromURL( (error, restaurant) => {
     self.restaurant = restaurant;
-    fillRestaurantHTML();
   })
 }
