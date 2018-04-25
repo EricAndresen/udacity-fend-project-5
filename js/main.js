@@ -190,3 +190,8 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 }
+
+if (!navigator.onLine){
+  const mapContainer = document.querySelector('#map-container');
+  mapContainer.style.display = "none";
+}
