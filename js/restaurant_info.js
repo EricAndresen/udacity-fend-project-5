@@ -169,5 +169,6 @@ if (!window.navigator.onLine){
 
   fetchRestaurantFromURL( (error, restaurant) => {
     self.restaurant = restaurant;
+    fillBreadcrumb()
   })
 }
