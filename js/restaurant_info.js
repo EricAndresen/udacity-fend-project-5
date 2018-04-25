@@ -1,6 +1,7 @@
 let restaurant;
 var map;
 
+
 /**
  * Initialize Google map, called from HTML.
  */
@@ -160,4 +161,14 @@ getParameterByName = (name, url) => {
   if (!results[2])
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+if (!window.navigator.onLine){
+  const mapContainer = document.querySelector('#map-container');
+  mapContainer.style.display = "none";
+
+  fetchRestaurantFromURL( (error, restaurant) => {
+    self.restaurant = restaurant;
+    fillRestaurantHTML();
+  })
 }
