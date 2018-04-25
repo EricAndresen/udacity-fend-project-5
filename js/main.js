@@ -1,5 +1,3 @@
-// TODO: make map height responsive (vh)
-// TODO: make restaurant display page responsive
 // TODO: make cards clickable (not just tiny details view text)
 // TODO: Accessibility
 
@@ -149,6 +147,7 @@ createRestaurantHTML = (restaurant) => {
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
+  image.alt = `Inside ${restaurant.name}`
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   div.append(image);
 
