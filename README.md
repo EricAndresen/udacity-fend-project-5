@@ -1,4 +1,4 @@
-# Improve Existing Site (in progress)
+# Improve Existing Site
 
 __Beware: Ugly Code__
 
